@@ -90,7 +90,7 @@ Ensure your PN532 NFC reader is connected to the Raspberry Pi via the USB to Ser
 You may need to identify the correct serial port for the reader. Run the following command to list available serial devices:
 
 ```
-ls /dev/tty.*
+ls /dev/tty*
 ```
 
 Look for a name like `/dev/tty.usbserial-XXXX` or `/dev/ttyUSB0`.
@@ -100,8 +100,7 @@ Look for a name like `/dev/tty.usbserial-XXXX` or `/dev/ttyUSB0`.
 Navigate to the project directory and start the application using `node`. You can specify the serial port and baud rate as command-line arguments.
 
 ```
-cd nfc-library-management
-node index.js --port /dev/tty.usbserial-210 --baudrate 115200
+node index.js --port /dev/ttyUSB0 --baudrate 115200
 ```
 
 * `--port` or `-p`: The serial port your NFC reader is connected to.

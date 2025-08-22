@@ -29,19 +29,9 @@ echo "--- Setting Node.js v22 as the default version ---"
 nvm alias default 22
 nvm use default
 
+source ~/.bashrc
+
 # --- Project Dependency Installation ---
-# Assumes the script is run from the root of the git repository
-if [ -d "nfc-library-management" ]; then
-    echo "--- Navigating into the project directory ---"
-    cd nfc-library-management
-
-    echo "--- Installing required npm modules ---"
-    npm install
-
-    echo "--- Setup Complete! ---"
-    echo "You can now run the application with: node index.js"
-else
-    echo "Error: 'nfc-library-management' directory not found."
-    echo "Please run this script from the root directory of your git repository."
-    exit 1
-fi
+echo "--- Installing required npm modules ---"
+npm install
+echo "You can now run the application with: node index.js"
