@@ -47,6 +47,15 @@ These instructions are for setting up the project on a fresh installation of Ras
 
 ![](hostname_pweronal-library.local.png) 
 
+
+Insert the microSD card to the Raspebrry Pi and pwoer it on. Wait for 1 minute, login that Raspberry Pi with the following command 
+
+```bash
+ssh pi@personal-library.local
+```
+
+Once you have successfully logged in, continue to the following step-by-step instruction on the Raspberry Pi.  
+
 ### 1. Clone the Repository
 
 First, connect to your Raspberry Pi via SSH and clone the project repository:
@@ -55,6 +64,7 @@ First, connect to your Raspberry Pi via SSH and clone the project repository:
 git clone https://github.com/clementyu/nfc-library-management.git
 cd nfc-library-management
 ```
+
 
 ### 2. Run the Setup Script
 
