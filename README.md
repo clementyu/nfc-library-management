@@ -43,7 +43,9 @@ nfc-library-management/
 
 ## Setup and Installation
 
-These instructions are for setting up the project on a fresh installation of Raspberry Pi OS.
+These instructions are for setting up the project on a fresh installation of Raspberry Pi OS. Makesure that the hostname is set to `personal-library.local` as below:
+
+![](hostname_pweronal-library.local.png) 
 
 ### 1. Clone the Repository
 
@@ -112,7 +114,7 @@ If you don't provide these arguments, the application will use the default value
 Open a web browser on any device connected to the same network as your Raspberry Pi and navigate to:
 
 ```
-http://:8080
+http://personal-library.local:8080
 ```
 
 You can find your Raspberry Pi's IP address by running `hostname -I` in the terminal.
