@@ -14,9 +14,13 @@ A web-based system for managing a library of books using NFC tags. Built with No
 ## Hardware Requirements
 
 * Raspberry Pi 4
-* PN532 NFC Reader Module
+* PN532 NFC Reader Module 
 * USB to Serial (UART) adapter
-* NFC Tags (e.g., Mifare Classic 1K)
+* NFC Tags (NTAG215)
+
+## Software Dependency
+
+* The driver, `node-pn532`, for the `PN532` chip. It's developed by Sean Lynch. https://github.com/techniq/node-pn532. 
 
 ## File Structure
 
@@ -133,3 +137,8 @@ http://personal-library.local:8080
 ```
 
 You can find your Raspberry Pi's IP address by running `hostname -I` in the terminal.
+
+
+## Regerence
+* NFC Tag, NTAG215: https://seritag.com/learn/tech/chips/ntag215
+* NFC Chipset: NXP PN532: https://www.nxp.com/docs/en/nxp/data-sheets/PN532_C1.pdf

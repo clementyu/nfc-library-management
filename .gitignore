@@ -151,3 +151,4 @@ www/build/ # If you use a build process that outputs to www/build
 # Project-specific build artifacts or temporary files
 coverage/
 temp/
+books.tsv
