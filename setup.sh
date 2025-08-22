@@ -29,8 +29,6 @@ echo "--- Setting Node.js v22 as the default version ---"
 nvm alias default 22
 nvm use default
 
-source ~/.bashrc
-
 # --- Project Dependency Installation ---
 echo "--- Installing required npm modules ---"
 npm install

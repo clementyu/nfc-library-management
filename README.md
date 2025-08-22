@@ -89,6 +89,12 @@ This script will:
 3. Navigate into the `nfc-library-management` directory.
 4. Install all the required `npm` packages.
 
+Then enable the change which has been done above. 
+
+```bash
+source ~/.bashrc
+```
+
 ## Running the Application
 
 ### 1. Connect the NFC Reader
