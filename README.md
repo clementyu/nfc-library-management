@@ -119,7 +119,7 @@ Look for a name like `/dev/tty.usbserial-XXXX` or `/dev/ttyUSB0`.
 
 Navigate to the project directory and start the application using `node`. You can specify the serial port and baud rate as command-line arguments.
 
-```
+```bash
 node index.js --port /dev/ttyUSB0 --baudrate 115200
 ```
 
@@ -137,6 +137,37 @@ http://personal-library.local:8080
 ```
 
 You can find your Raspberry Pi's IP address by running `hostname -I` in the terminal.
+
+
+### [Optional] 5. Make the server running once Raspberry Pi is powered on
+Use the following command to launch the Smart Toolbox webserver and RFID scanning while Raspberry Pi booted up. 
+
+* Install pm2
+
+Login the Raspberry pi and run the following command: 
+
+```bash
+sudo apt install nodejs npm
+sudo npm install -g pm2
+```
+
+* Enable pm2 auto-statup  
+```bash
+pm2 startup
+```
+
+Then you will be prompt a command to enable auto-startup. Copy and paste the command and launch as below. The following command line was what I've received. It might be different in your environment.  
+
+```bash
+sudo env PATH=$PATH:/home/pi/.nvm/versions/node/v22.18.0/bin /usr/local/lib/node_modules/pm2/bin/pm2 startup systemd -u pi --hp /home/pi
+```
+
+```bash
+cd /home/pi/nfc-library-management
+pm2 start index.js --name nfc-library-management -- --port /dev/ttyUSB0 --baudrate 115200
+pm2 save
+sudo reboot -p
+```
 
 
 ## Regerence
