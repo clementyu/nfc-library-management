@@ -64,7 +64,7 @@ Once you have successfully logged in, continue to the following step-by-step ins
 
 First, connect to your Raspberry Pi via SSH and clone the project repository:
 
-```
+```bash
 git clone https://github.com/clementyu/nfc-library-management.git
 cd nfc-library-management
 ```
@@ -76,13 +76,13 @@ A setup script is included to automate the installation of all necessary softwar
 
 Make the script executable:
 
-```
+```bash
 chmod +x setup.sh
 ```
 
 Then, run the script:
 
-```
+```bash
 ./setup.sh
 ```
 
@@ -109,7 +109,7 @@ Ensure your PN532 NFC reader is connected to the Raspberry Pi via the USB to Ser
 
 You may need to identify the correct serial port for the reader. Run the following command to list available serial devices:
 
-```
+```bash
 ls /dev/tty*
 ```
 
